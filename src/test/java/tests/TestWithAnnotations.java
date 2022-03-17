@@ -11,11 +11,12 @@ public class TestWithAnnotations {
     private static final int ISSUE_NUMBER = 65;
 
     @Test
-    @Owner("T S")
+    @Owner("team_facelift")
     @Severity(SeverityLevel.NORMAL)
     @Story("Create new issue")
     @DisplayName("Check that issue with a specific number exists")
     @Tag("smoke")
+
     @Link(value = "Testing", url = "https://github.com")
 
     void checkIfIssueExists() {
