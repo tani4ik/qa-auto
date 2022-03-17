@@ -2,6 +2,7 @@ package tests;
 
 import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 @Feature("Github issues")
@@ -14,7 +15,7 @@ public class TestWithAnnotations {
     @Severity(SeverityLevel.NORMAL)
     @Story("Create new issue")
     @DisplayName("Check that issue with a specific number exists")
-
+    @Tag("smoke")
     @Link(value = "Testing", url = "https://github.com")
 
     void checkIfIssueExists() {
