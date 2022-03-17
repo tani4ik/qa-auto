@@ -1,6 +1,7 @@
 package tests;
 
 import io.qameta.allure.*;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -16,7 +17,7 @@ public class TestWithAnnotations {
     @Story("Create new issue")
     @DisplayName("Check that issue with a specific number exists")
     @Tag("smoke")
-
+    @Disabled
     @Link(value = "Testing", url = "https://github.com")
 
     void checkIfIssueExists() {
