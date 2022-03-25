@@ -81,7 +81,7 @@ public class TestPractiseForm {
 
     @AfterEach
     void addAttachments() {
-        Attach.screenshotAs("Last screenshot");
+        Attach.screenshotAs("Screenshot");
         Attach.pageSource();
         Attach.browserConsoleLogs();
         Attach.addVideo();
