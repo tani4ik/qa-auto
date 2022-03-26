@@ -9,6 +9,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import pages.RegistrationPage;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
+import static com.codeborne.selenide.Selenide.zoom;
 import static io.qameta.allure.Allure.step;
 
 public class TestPractiseForm {
@@ -40,10 +41,9 @@ public class TestPractiseForm {
         String subject = "Maths";
         String hobby_1 = "Sports";
         String hobby_2 = "Music";
-        String fileName = "penguin.jpeg";
         String address = "Main ave, apt 1";
-        String state = "Haryana";
-        String city = "Karnal";
+        String state = "NCR";
+        String city = "Delhi";
 
         step("Open registration page", () -> {
             registrationPage.openPage();
@@ -58,7 +58,6 @@ public class TestPractiseForm {
                 .setBirthDate(day, month, year)
                 .selectSubject(subject)
                 .selectHobbies(hobby_1, hobby_2)
-                .uploadImage(fileName)
                 .setCurrentAddress(address)
                 .selectState(state)
                 .selectCity(city)
@@ -73,7 +72,6 @@ public class TestPractiseForm {
                     .verifyForm("Date of Birth", day + " " + month + "," + year)
                     .verifyForm("Subjects", subject)
                     .verifyForm("Hobbies", hobby_1 + ", " + hobby_2)
-                    .verifyForm("Picture", fileName)
                     .verifyForm("Address", address)
                     .verifyForm("State and City", state + " " + city);
         });
